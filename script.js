@@ -38,3 +38,13 @@ showMore.addEventListener("click", (e) => {
   page++;
   fetchImages(page);
 });
+
+searchInput.addEventListener("keydown", (e) => {
+   if (e.key === "Enter") {
+    page = 1;
+    bodyContainer.innerHTML = "";
+    showMore.style.display = "none";
+
+    fetchImages(page);
+  }
+});
