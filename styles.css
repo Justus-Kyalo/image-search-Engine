@@ -4,7 +4,7 @@
   font-family: "Roboto Condensed", sans-serif;
 }
 body{
-
+  padding-bottom: 50px;
 }
 .outer-container {
   width: 100%;
@@ -15,6 +15,7 @@ body{
   position: absolute;
   top: 5%;
   row-gap: 50px;
+  padding-bottom: 50px;
 }
 
 .search-bar {
@@ -72,4 +73,5 @@ body{
   background: #ffd129;
   border-radius: 5px;
   display: none;
+  
 }

@@ -2,6 +2,8 @@ const accessKey = "NClEd1riL1XXgZeumwv60X-q0EnNg_cyY1ViqfVAA4A";
 const bodyContainer = document.querySelector(".body-container");
 const searchInput = document.querySelector(".input-bar");
 const searchBtn = document.querySelector(".search-btn");
+const showMore = document.querySelector(".show-more-btn");
+let page;
 
 async function fetchImages(page) {
   const query = searchInput.value;
@@ -16,17 +18,23 @@ async function fetchImages(page) {
     bodyContainer.appendChild(imageContainer);
 
     const image = document.createElement("img");
-
     imageContainer.appendChild(image);
-
     image.src = item.urls.small;
   });
+
+  showMore.style.display = "flex";
+  //searchInput.value = "";
 }
 searchBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  let page = 1;
+  page = 1;
+  bodyContainer.innerHTML = "";
+  showMore.style.display = "none";
 
   fetchImages(page);
-
-  searchInput.innerHTML = "";
+});
+showMore.addEventListener("click", (e) => {
+  e.preventDefault();
+  page++;
+  fetchImages(page);
 });
