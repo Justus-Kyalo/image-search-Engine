@@ -40,7 +40,7 @@ showMore.addEventListener("click", (e) => {
 });
 
 searchInput.addEventListener("keydown", (e) => {
-   if (e.key === "Enter") {
+  if (e.key === "Enter") {
     page = 1;
     bodyContainer.innerHTML = "";
     showMore.style.display = "none";

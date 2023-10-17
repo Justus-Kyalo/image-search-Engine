@@ -4,7 +4,8 @@
   font-family: "Roboto Condensed", sans-serif;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -48,10 +49,9 @@ body {
   display: flex;
 }
 
-
 .input-bar {
   /* flex-basis: 80%; */
-  flex:  1 1 0%;
+  flex: 1 1 0%;
   font-size: 1.2rem;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -92,7 +92,7 @@ body {
   width: 100%;
   max-width: 250px;
   max-height: 150px;
-  overflow:hidden;
+  overflow: hidden;
   border-radius: 5px;
 }
 .image-container img {
